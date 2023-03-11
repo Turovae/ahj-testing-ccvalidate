@@ -23,8 +23,6 @@ export default class ValidateForm {
     this.inputEl = document.createElement('input');
     this.inputEl.classList.add('validate-input');
     this.inputEl.type = 'text';
-    // this.inputEl.inputMode = 'numeric';
-    // this.inputEl.pattern = '\\d*';
     this.inputEl.placeholder = 'Credit card number';
     this.inputEl.name = 'ccnumber';
     this.element.appendChild(this.inputEl);
