@@ -11,6 +11,7 @@ export default class ValidateForm {
     this.validate = this.validate.bind(this);
     this.typeField = this.typeField.bind(this);
     this.controlledEl = null;
+    this.lastDeterminedPaySystem = null;
 
     this.create();
   }
@@ -82,8 +83,11 @@ export default class ValidateForm {
       this.msgEl.remove();
     }
 
-    if (this.inputEl.value.length < 4) {
-      this.controlledEl.disableCardsExcept(getPaySystem(this.inputEl.value));
+    const paySystem = getPaySystem(this.inputEl.value);
+
+    if (paySystem !== this.lastDeterminedPaySystem) {
+      this.controlledEl.disableCardsExcept(paySystem);
+      this.lastDeterminedPaySystem = paySystem;
     }
   }
 }
