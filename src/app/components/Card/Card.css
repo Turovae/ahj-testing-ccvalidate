@@ -1,0 +1,36 @@
+.card {
+  float: left;
+  width: 39px;
+  height: 25px;
+  overflow: hidden;
+  text-indent: -9999px;
+  margin-right: 4px;
+  background-position: 0 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.card li {
+  display: block;
+  float: left;
+}
+
+.card-disabled {
+  opacity: .3;
+}
+
+.card.visa {
+  background-image: url(./img/visa.png);
+}
+
+.card.mastercard {
+  background-image: url(./img/mastercard.png);
+}
+
+.card.westernunion {
+  background-image: url(./img/western-union.png);
+}
+
+.card.mir {
+  background-image: url(./img/mir.png);
+}

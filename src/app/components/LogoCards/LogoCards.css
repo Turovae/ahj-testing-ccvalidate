@@ -1,0 +1,7 @@
+.cards {
+  margin: 10px 0;
+  height: 25px;
+  /* background: #777; */
+  padding-left: 0;
+  list-style: none;
+}
