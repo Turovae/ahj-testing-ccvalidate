@@ -26,9 +26,9 @@ describe('Credit Card Validator form', () => {
     });
 
     browser = await puppeteer.launch({
-      headless: false,
-      slowMo: 100,
-      devtools: true,
+      // headless: false,
+      // slowMo: 100,
+      // devtools: true,
     });
 
     page = await browser.newPage();
@@ -72,5 +72,29 @@ describe('Credit Card Validator form', () => {
     const messageEl = await page.waitForSelector('.validate-tooltip');
 
     expect(await messageEl.evaluate((el) => el.textContent)).toBe('Invalid card number!');
+  });
+
+  /**
+   * Попытка протестировать исчезновение сообщения при вводе текста.
+   * тест успешен, но не тестирует то что надо...
+   * Хотелось бы знать, как можно протестировать
+   * строки 80-88 в компоненте ./src/app/components/ValidateForm/ValidateForm.js
+   */
+  test('Should add a invalid message with valid number', async () => {
+    await input.type('522551237468246');
+    await submit.click();
+
+    const messageEl = await page.waitForSelector('.validate-tooltip');
+
+    expect(await messageEl.evaluate((el) => el.textContent)).toBe('Invalid card number!');
+    await input.type('5');
+    expect(await page.$('.validate-tooltip')).toBe(null);
+  });
+
+  test('Should disable Visa card', async () => {
+    await input.type('522551237468246');
+    await submit.click();
+
+    await page.waitForSelector('.card.visa.card-disabled');
   });
 });
