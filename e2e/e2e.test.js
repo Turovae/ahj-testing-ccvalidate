@@ -2,7 +2,7 @@
 import puppeteer from 'puppeteer';
 import { fork } from 'child_process';
 
-jest.setTimeout(60000);
+jest.setTimeout(30000);
 
 describe('Credit Card Validator form', () => {
   let browser = null;
@@ -26,9 +26,9 @@ describe('Credit Card Validator form', () => {
     });
 
     browser = await puppeteer.launch({
-      headless: false,
-      slowMo: 100,
-      devtools: true,
+      // headless: false,
+      // slowMo: 100,
+      // devtools: true,
     });
 
     page = await browser.newPage();
