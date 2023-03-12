@@ -23,12 +23,32 @@
   background-image: url(./img/visa.png);
 }
 
+.card.dinersclub {
+  background-image: url(./img/diners.png);
+}
+
 .card.mastercard {
   background-image: url(./img/mastercard.png);
 }
 
-.card.westernunion {
-  background-image: url(./img/western-union.png);
+.card.jcb {
+  background-image: url(./img/jcb.png);
+}
+
+.card.americanexpress {
+  background-image: url(./img/amex.png);
+}
+
+.card.maestro {
+  background-image: url(./img/maestro.png);
+}
+
+.card.discover {
+  background-image: url(./img/discover.png);
+}
+
+.card.unionpay {
+  background-image: url(./img/union.png);
 }
 
 .card.mir {

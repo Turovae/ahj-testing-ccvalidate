@@ -34,7 +34,7 @@ export function getPaySystem(cardNumber) {
   }
 
   if (numberStr.match(/^3[15]/)) {
-    return 'JSB';
+    return 'JCB';
   }
 
   if (numberStr.match(/^3[47]/)) {

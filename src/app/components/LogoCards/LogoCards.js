@@ -5,7 +5,7 @@ export default class LogoCards {
   constructor() {
     this.element = null;
     this.container = null;
-    this.cardTypes = ['Visa', 'MasterCard', 'WesternUnion', 'Mir'];
+    this.cardTypes = ['Visa', 'MasterCard', 'JCB', 'DinersClub', 'AmericanExpress', 'Maestro', 'Discover', 'UnionPay', 'Mir'];
     this.cards = [];
 
     this.create();
