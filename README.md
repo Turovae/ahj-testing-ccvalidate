@@ -1,4 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/4eu9wplnh22lwqqu?svg=true)](https://ci.appveyor.com/project/Turovae/ahj-testing-ccvalidate)
+[![Build status](https://ci.appveyor.com/api/projects/status/oq5y74djev4moi0e?svg=true)](https://ci.appveyor.com/project/Turovae/ahj-testing-ccvalidate)
 ---
 
 # Домашнее задание к занятию "4.Организация тестирования"
