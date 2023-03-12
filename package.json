@@ -6,7 +6,7 @@
     "lint": "eslint .",
     "start": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "test": "jest",
+    "test": "jest --detectOpenHandles",
     "coverage": "jest --coverage",
     "e2e": "jest --testPathPattern=./e2e/ --runInBand",
     "preshow:coverage": "npm run coverage",
