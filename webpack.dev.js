@@ -6,6 +6,6 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'source-map',
   devServer: {
-    port: 8080,
+    port: 9000,
   },
 });
