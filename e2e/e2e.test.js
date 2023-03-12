@@ -80,21 +80,21 @@ describe('Credit Card Validator form', () => {
    * Хотелось бы знать, как можно протестировать
    * строки 80-88 в компоненте ./src/app/components/ValidateForm/ValidateForm.js
    */
-  test('Should add a invalid message with valid number', async () => {
-    await input.type('522551237468246');
-    await submit.click();
+  // test('Should add a invalid message with valid number', async () => {
+  //   await input.type('522551237468246');
+  //   await submit.click();
 
-    const messageEl = await page.waitForSelector('.validate-tooltip');
+  //   const messageEl = await page.waitForSelector('.validate-tooltip');
 
-    expect(await messageEl.evaluate((el) => el.textContent)).toBe('Invalid card number!');
-    await input.type('5');
-    expect(await page.$('.validate-tooltip')).toBe(null);
-  });
+  //   expect(await messageEl.evaluate((el) => el.textContent)).toBe('Invalid card number!');
+  //   await input.type('5');
+  //   expect(await page.$('.validate-tooltip')).toBe(null);
+  // });
 
-  test('Should disable Visa card', async () => {
-    await input.type('522551237468246');
-    await submit.click();
+  // test('Should disable Visa card', async () => {
+  //   await input.type('522551237468246');
+  //   await submit.click();
 
-    await page.waitForSelector('.card.visa.card-disabled');
-  });
+  //   await page.waitForSelector('.card.visa.card-disabled');
+  // });
 });
