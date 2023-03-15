@@ -5,7 +5,7 @@ branches:
   only:
     - main
 
-cache: node_modules
+# cache: node_modules
 
 install:
   - npm install
